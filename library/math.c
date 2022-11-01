@@ -1,12 +1,4 @@
-#include <time.h>
-
-//----------------------------------------------------------------
-//Initialisation des fonctions et des structure
-
-int random(int min,int max);
-int fastrand();
-
-//----------------------------------------------------------------
+#include "h.h"
 
 int INITIALISATION_RANDOM;
 int RANDOM;

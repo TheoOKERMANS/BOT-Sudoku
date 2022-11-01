@@ -1,8 +1,4 @@
-#include <stdio.h>
-#include "library/print.c"
-#include <time.h>
-
-#define LOOP 1000000
+#include "library/h.h"
 
 int main(int argc, char *argv[]) {
     printf("Start\n");
@@ -14,7 +10,7 @@ int main(int argc, char *argv[]) {
     while(map_tested < LOOP)
     {
         Map carte = init_map();
-        //printf(print_map(carte));
+        printf(print_map(carte));
         carte = resolve_map(carte);
         //printf("\n\n\n\n\n");
         //printf(print_map(carte));
@@ -23,10 +19,7 @@ int main(int argc, char *argv[]) {
         map_tested++;
         solved += is_solved(carte);
         if(is_solved(carte))
-        {
-            printf(print_int(map_tested));
-            printf("\n");
-        }
+            printf("%s\n", print_int(map_tested));
     }
     printf("Stop\n%i/%i\n",solved,LOOP);
     

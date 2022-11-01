@@ -1,47 +1,4 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-#include "math.c"
-
-#define SIZE 9
-
-//----------------------------------------------------------------
-//Initialisation des fonctions et des structure
-
-typedef struct Case Case;
-typedef struct Map Map;
-
-Map init_map();
-Map init_map_from_table();
-Map put_random_number_in_map(Map map);
-Map resolve_map();
-int can_be_value(Map map,int x, int y, int value);
-int can_be_on_line(Map map,int x, int y, int value);
-int can_be_on_column(Map map,int x, int y, int value);
-int can_be_on_block(Map map,int x, int y, int value);
-int* convert_int_array_to_right_size(int* list);
-int* get_numbers_in_block(Map map,int x,int y);
-int number_not_in_list(int number, int* list,int size);
-int* get_numbers_not_in_block(Map map,int x,int y);
-int is_solved(Map map);
-int is_line_completed(Map map, int x);
-int is_column_completed(Map map, int y);
-
-//----------------------------------------------------------------
-
-struct Case
-{
-    int x;
-    int y;
-    int value;
-    int hasValue;
-};
-
-struct Map
-{
-    Case grid[9][9];
-};
+#include "h.h"
 
 Map init_map()
 {

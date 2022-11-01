@@ -1,16 +1,4 @@
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-
-#include "structure.c"
-//----------------------------------------------------------------
-//Initialisation des fonctions et des structure
-
-const char* print_map(Map map);
-const char* print_int_list(int* list);
-const char* print_boolean(int bool);
-
-//----------------------------------------------------------------
+#include "h.h"
 
 const char* print_map(Map map){
     static char result[] = "";
@@ -56,6 +44,6 @@ const char* print_boolean(int bool)
 const char* print_int(int value)
 {
     static char result[] = "";
-    sprintf(result,"%d",value);
+    printf("%s%d", result, value);
     return result;
 }
